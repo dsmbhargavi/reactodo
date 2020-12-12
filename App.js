@@ -11,6 +11,9 @@ import {
 import { CheckBox, Card } from "react-native-elements";
 import Constants from "expo-constants";
 import DatePicker from "react-native-datepicker";
+import Calendar from 'react-native-calendar-datepicker';
+import Moment from 'moment';
+
 
 let id = 0;
 
@@ -123,8 +126,7 @@ export default class App extends React.Component {
             />{" "} <View style = {
                 [styles.appdate]
             } >
-            <
-            DatePicker style = {
+            {/* <DatePicker style = {
                 {
                     width: 200,
                 }
@@ -152,7 +154,17 @@ export default class App extends React.Component {
                 }
             }
             onDateChange = { this.dateChange }
-            />{" "} 
+            />{" "}  */}
+
+            <Calendar
+                onChange={(date) => this.setState({date})}
+                selected={this.state.date}
+                // We use Moment.js to give the minimum and maximum dates.
+                minDate={Moment().startOf('day')}
+                maxDate={Moment().add(10, 'years').startOf('day')}
+                onDateChange = { this.dateChange }
+                />
+
             <TouchableOpacity style = {
                 [styles.addbutton, styles]
             }
@@ -166,7 +178,7 @@ export default class App extends React.Component {
             </View>{" "} \
             <ScrollView style = {
                 {
-                    backgroundColor: "#fddb3a",
+                    backgroundColor: "black",
                     marginBottom: 10,
                 }
             } > { " " } {

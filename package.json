@@ -11,9 +11,13 @@
     "@babel/runtime": "7.0.0-beta.55",
     "expo": "~39.0.2",
     "expo-status-bar": "~1.0.2",
+    "moment": "^2.29.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
+    "react-native-calendar-datepicker": "^1.2.2",
+    "react-native-calendar-picker": "^7.0.5",
+    "react-native-calender": "^1.0.1",
     "react-native-datepicker": "^1.7.2",
     "react-native-elements": "^3.0.0-alpha.1",
     "react-native-web": "^0.13.18"
